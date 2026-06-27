@@ -9,7 +9,7 @@ export default function ProjectsSection() {
           Selected Work
         </p>
 
-        <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
+        <h2 className="mt-4 text-3xl font-semibold text-zinc-950 md:text-5xl">
           Business problems solved through data.
         </h2>
       </div>

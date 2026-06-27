@@ -21,11 +21,11 @@ export default async function ProjectPage({ params }) {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100">
+    <main className="min-h-screen bg-zinc-50 text-zinc-950">
       <Navbar />
 
       <section className="mx-auto max-w-4xl px-6 py-32">
-        <Link href="/" className="text-sm text-zinc-500 hover:text-white">
+        <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-950">
           ← Back to home
         </Link>
 
@@ -33,43 +33,56 @@ export default async function ProjectPage({ params }) {
           {project.type}
         </p>
 
-        <h1 className="mt-6 text-4xl font-semibold text-white md:text-6xl">
+        <h1 className="mt-6 text-4xl font-semibold text-zinc-950 md:text-6xl">
           {project.title}
         </h1>
 
-        <p className="mt-8 text-lg leading-8 text-zinc-400">
+        <p className="mt-8 text-lg leading-8 text-zinc-600">
           {project.description}
         </p>
 
+        {project.liveUrl && (
+          <div className="mt-8">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+            >
+              {project.liveLabel || "Visit live project"} →
+            </a>
+          </div>
+        )}
+
         <div className="mt-12 grid gap-6">
-          <section className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
-            <h2 className="text-xl font-semibold text-white">
+          <section className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm shadow-zinc-200/70">
+            <h2 className="text-xl font-semibold text-zinc-950">
               Business Problem
             </h2>
 
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
+            <p className="mt-4 text-sm leading-6 text-zinc-600">
               {project.problem}
             </p>
           </section>
 
-          <section className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
-            <h2 className="text-xl font-semibold text-white">Approach</h2>
+          <section className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm shadow-zinc-200/70">
+            <h2 className="text-xl font-semibold text-zinc-950">Approach</h2>
 
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
+            <p className="mt-4 text-sm leading-6 text-zinc-600">
               {project.approach}
             </p>
           </section>
 
-          <section className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
-            <h2 className="text-xl font-semibold text-white">Impact</h2>
+          <section className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm shadow-zinc-200/70">
+            <h2 className="text-xl font-semibold text-zinc-950">Impact</h2>
 
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
+            <p className="mt-4 text-sm leading-6 text-zinc-600">
               {project.impact}
             </p>
           </section>
 
-          <section className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
-            <h2 className="text-xl font-semibold text-white">
+          <section className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm shadow-zinc-200/70">
+            <h2 className="text-xl font-semibold text-zinc-950">
               Tools & Skills
             </h2>
 
@@ -77,7 +90,7 @@ export default async function ProjectPage({ params }) {
               {project.tools.map((tool) => (
                 <span
                   key={tool}
-                  className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+                  className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-600"
                 >
                   {tool}
                 </span>

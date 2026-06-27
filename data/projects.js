@@ -5,7 +5,8 @@ export const projects = [
     type: "Business Project",
     description:
       "Built and launched a real-world business platform integrating payments, SEO, analytics, and operational workflows.",
-    href: "https://eatlikeawolf.mx",
+    liveUrl: "https://eatlikeawolf.mx",
+    liveLabel: "Visit live site",
     problem:
       "Pet owners wanted healthier food options, but most alternatives were either expensive, confusing, or hard to adopt consistently.",
     approach:
@@ -14,6 +15,7 @@ export const projects = [
       "Launched a functional business platform with payments, analytics, SEO foundation, and a scalable fulfillment process.",
     tools: ["Next.js", "Tailwind CSS", "Mercado Pago", "Vercel", "SEO", "Operations"],
   },
+
   {
     slug: "revenue-forecasting",
     title: "Revenue Forecasting",
