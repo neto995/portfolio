@@ -15,7 +15,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/ernesto995/"
+            href="https://linkedin.com/in/ernesto995"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-zinc-950"

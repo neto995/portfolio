@@ -110,7 +110,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/ernesto995/"
+                href="https://linkedin.com/in/ernesto995"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white/70 px-6 py-3 text-sm font-medium text-zinc-800 transition hover:border-zinc-400 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50"

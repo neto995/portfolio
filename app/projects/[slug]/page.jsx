@@ -5,10 +5,47 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import { projects } from "../../../data/projects";
 
+const siteUrl = "https://ernestootaqui.com";
+
 export function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const project = projects.find((project) => project.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    };
+  }
+
+  const title = `${project.title} Case Study`;
+  const description = project.description;
+  const path = `/projects/${project.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title: `${title} | Ernesto Otaqui`,
+      description,
+      url: `${siteUrl}${path}`,
+      siteName: "Ernesto Otaqui Portfolio",
+      type: "article",
+    },
+    twitter: {
+      card: "summary",
+      title: `${title} | Ernesto Otaqui`,
+      description,
+    },
+  };
 }
 
 export default async function ProjectPage({ params }) {
