@@ -1,3 +1,5 @@
+import HeroSignal from "./HeroSignal";
+
 const focusAreas = [
   {
     title: "Business Operations",
@@ -23,19 +25,19 @@ const graphPath =
 export default function Hero() {
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-zinc-50 px-6 pb-20 pt-28 text-zinc-950 sm:pt-32">
+      <section className="relative isolate overflow-hidden border-b border-lime-200/70 bg-[#f8faf5] px-6 pb-16 pt-28 text-zinc-950 sm:pt-32">
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_16%_16%,rgba(255,255,255,0.95),transparent_28%),radial-gradient(circle_at_78%_24%,rgba(132,204,22,0.12),transparent_24%),linear-gradient(135deg,#fafafa_0%,#f4f4f5_52%,#e4e4e7_100%)]"
+          className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.98),transparent_26%),radial-gradient(circle_at_78%_26%,rgba(132,204,22,0.18),transparent_28%),linear-gradient(135deg,#fbfcf8_0%,#f4f8ec_52%,#eef5e2_100%)]"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 -z-10 h-56 bg-gradient-to-t from-zinc-50 to-transparent"
+          className="absolute inset-x-0 bottom-0 -z-10 h-56 bg-gradient-to-t from-[#f8faf5] to-transparent"
         />
 
         <div
           aria-hidden="true"
-          className="absolute inset-x-[-24%] bottom-[-18%] top-[20%] -z-10 opacity-75 [perspective:1100px]"
+          className="absolute inset-x-[-24%] bottom-[-18%] top-[22%] -z-10 opacity-55 [perspective:1100px]"
         >
           <svg
             className="h-full w-full transform-gpu [transform:rotateX(62deg)_rotateZ(-7deg)_scale(1.16)]"
@@ -45,16 +47,16 @@ export default function Hero() {
           >
             <defs>
               <linearGradient id="heroGraphLine" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0%" stopColor="rgba(63,63,70,0)" />
-                <stop offset="24%" stopColor="rgba(113,113,122,0.2)" />
-                <stop offset="58%" stopColor="rgba(77,124,15,0.36)" />
-                <stop offset="100%" stopColor="rgba(63,63,70,0.04)" />
+                <stop offset="0%" stopColor="rgba(132,204,22,0)" />
+                <stop offset="28%" stopColor="rgba(132,204,22,0.16)" />
+                <stop offset="62%" stopColor="rgba(34,197,94,0.22)" />
+                <stop offset="100%" stopColor="rgba(132,204,22,0.03)" />
               </linearGradient>
             </defs>
 
             <path
               d={graphPath}
-              stroke="rgba(24,24,27,0.045)"
+              stroke="rgba(63,98,18,0.04)"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="18"
@@ -62,7 +64,7 @@ export default function Hero() {
             />
             <path
               d={graphPath}
-              stroke="rgba(77,124,15,0.12)"
+              stroke="rgba(132,204,22,0.16)"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="8"
@@ -89,13 +91,25 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className="mx-auto flex min-h-[calc(88svh-8rem)] max-w-6xl items-center">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl font-semibold leading-[0.98] tracking-tight text-zinc-950 sm:text-6xl md:text-7xl lg:text-8xl">
-              Turning ambiguity into operational clarity.
+        <div className="mx-auto grid min-h-[calc(100svh-4.5rem)] max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,0.96fr)_minmax(460px,0.9fr)] lg:gap-16">
+          <div className="max-w-3xl">
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500 sm:text-xs sm:tracking-[0.34em]">
+              Operations · Revenue · Analytics
+              <span
+                aria-hidden="true"
+                className="ml-2 inline-block h-3 w-1 translate-y-0.5 bg-[#84cc16]"
+              />
+            </p>
+
+            <h1 className="mt-8 text-5xl font-semibold leading-[0.98] tracking-normal text-zinc-950 sm:text-6xl md:text-7xl lg:text-[4.55rem] xl:text-[5rem]">
+              <span className="block">Turning ambiguity</span>
+              <span className="block">
+                into <span className="text-lime-700">operational</span>
+              </span>
+              <span className="block text-lime-700">clarity.</span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-base leading-8 text-zinc-600 sm:text-lg md:text-xl">
+            <p className="mt-8 max-w-xl text-base leading-8 text-zinc-600 sm:text-lg">
               I help companies transform messy operational problems into
               scalable processes, clearer decisions, and measurable business
               impact through data, finance, and execution.
@@ -104,25 +118,30 @@ export default function Hero() {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white shadow-[0_18px_48px_rgba(24,24,27,0.16)] transition hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50"
+                className="inline-flex items-center justify-center bg-[#84cc16] px-6 py-4 font-mono text-sm font-medium tracking-[0.04em] text-[#132a05] shadow-[0_18px_48px_rgba(132,204,22,0.22)] transition hover:bg-[#a3e635] focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-600 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8faf5]"
               >
-                View Selected Work
+                View Selected Work →
               </a>
 
               <a
                 href="https://linkedin.com/in/ernesto995"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white/70 px-6 py-3 text-sm font-medium text-zinc-800 transition hover:border-zinc-400 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50"
+                className="inline-flex items-center justify-center border border-zinc-200 bg-white/70 px-6 py-4 font-mono text-sm font-medium tracking-[0.04em] text-zinc-800 transition hover:border-[#84cc16] hover:bg-white hover:text-lime-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-600 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f8faf5]"
               >
                 LinkedIn
               </a>
             </div>
           </div>
+
+          <div className="w-full max-w-[540px] justify-self-start lg:justify-self-end">
+            <HeroSignal />
+          </div>
         </div>
       </section>
 
       <section
+        id="capabilities"
         aria-label="Operator focus areas"
         className="bg-zinc-50 px-6 pb-24 text-zinc-950"
       >
